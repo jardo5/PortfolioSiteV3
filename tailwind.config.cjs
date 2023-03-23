@@ -22,7 +22,15 @@ module.exports = {
       },
       to: {
         'underlineEnd': "#4c606f"
-      }
+      },
+      keyframes: {
+        pulseFade: {
+          '15%': { opacity: .15 },
+        },
+      },
+      animation: {
+        pulseFade: 'pulseFade 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
     },
   },
   plugins: [],

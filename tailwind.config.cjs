@@ -31,6 +31,9 @@ module.exports = {
       animation: {
         pulseFade: 'pulseFade 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
+      listStyleType: {
+        'square': 'square',
+      },
     },
   },
   plugins: [],

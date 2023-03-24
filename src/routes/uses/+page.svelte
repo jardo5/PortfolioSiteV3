@@ -1,5 +1,5 @@
-<div class="bg-black h-full font-FiraCode text-white flex flex-col">
-    <div class="flex flex-col justify-center items-center mt-12 gap-2">
+<div class="font-FiraCode text-white flex flex-col">
+    <div class="flex flex-col justify-center items-center mt-6 gap-2">
         <!--TODO: Change color-->
         <h1 class="text-4xl flex flex-row bg-gradient-to-r from-blue-600 to-white text-transparent bg-clip-text">
             <span class="">&#60;</span>
@@ -10,8 +10,8 @@
         <h3 class="text-xl">My Daily Setup & Tools</h3>
         <h3 class="text-sm">Last Update: 3/23/23</h3>
     </div>
-    <div class="flex flex-row justify-around items-center w-full h-full">
-        <div class="bg-slate-500 text-center h-[90%] w-1/4 flex flex-col overflow-hidden">
+    <div class="flex flex-row justify-center items-center w-full h-fit">
+        <div class="text-center h-1/2 w-1/4 flex text-white flex-col overflow-y-scroll">
             <h1 class="w-full text-2xl">
                 Hardware
             </h1>
@@ -24,8 +24,8 @@
                         <li>GPU: Nvidia RTX 3060</li>
                         <li> Storage:
                             <ul class="pl-4 list-square">
-                                <li>SSD2: PNY 240GB </li>
-                                <li>SSD1: Sandisk SSD Plus 1TB </li>
+                                <li>SSD1: PNY 240GB </li>
+                                <li>SSD2: Sandisk SSD Plus 1TB </li>
                                 <li>HDD: Hitachi 4TB</li>
                             </ul>
                         </li>
@@ -52,7 +52,7 @@
                 </li>   
             </ul>
         </div>
-        <div class="bg-slate-500 text-center h-[90%] w-1/4 flex flex-col overflow-hidden">
+        <div class="text-center h-1/2 w-1/4 flex flex-col overflow-y-scroll">
             <h1 class="w-full text-2xl">
                 Software & Tools
             </h1>
@@ -76,7 +76,7 @@
                     </ul>
             </ul>
         </div>
-        <div class="bg-slate-500 text-center h-[90%] w-1/4 flex flex-col overflow-hidden">
+        <div class="text-center h-1/2 w-1/4 flex flex-col overflow-y-scroll">
             <h1 class="w-full text-2xl">
                 Languages & Frameworks
             </h1>

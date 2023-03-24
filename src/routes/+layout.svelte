@@ -20,8 +20,10 @@
 <!-- TODO: Reconsider Background -->
 <!-- 393d3f, 62929e, 546a7b  -->
 <!-- Make Whole Div Clickable-->
+<!-- FIX USES PAGE FOOTER WONT SHOW-->
 
-<body class="h-screen w-full flex flex-col overflow-clip">
+
+<body class="w-full h-screen flex flex-col overflow-clip bg-gradient-to-r from-gray-900 to-black">
         <header class="bg-secondary h-12 w-full flex font-FiraCode justify-between text-white">
             <div class="h-12 flex items-center">
                 <div class="h-full w-24 flex justify-center items-center border-navBorder border-x hover:transition-all hover:ease-in-out hover:bg-navHover">
@@ -70,18 +72,17 @@
                 </div>
             </nav>
         </header>
-        <div class="h-screen bg-black text-white flex flex-col">
+        <div class="h-screen text-white flex flex-col justify-center items-center bg-gradient-to-r from-gray-900 to-black">
             <slot />
-            
-            <center class="relative bottom-[5%] animate-pulseFade">
-                <svg class="fill-white cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 24 24" on:click={toggleFooter} on:keyup={toggleFooter}>
+            <div class="w-fit absolute justify-center animate-pulseFade bottom-1 text-center">
+                <svg id="showSVG" class="fill-white bottom-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 24 24" on:click={toggleFooter} on:keyup={toggleFooter}>
                     <path fill="currentColor" d="m7 14l5-5l5 5H7Z" />
                 </svg>
-            </center>
+            </div>
         </div>
-        <div>
+        <div class="relative">
             {#if $footerVisible}
-              <footer transition:slide="{{delay: 200, duration: 700}}" on:click={toggleFooter} on:keyup={toggleFooter} class="flex h-22 justify-center items-center w-full bg-white">
+              <footer transition:slide="{{delay: 200, duration: 700}}" on:click={toggleFooter} on:keyup={toggleFooter} class="flex h-22 justify-center items-center w-full bg-gradient-to-r from-gray-900 to-black">
                 <div>
                     <svg transition:fade="{{delay: 200, duration: 700}}" xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 24 24"><path fill="currentColor" d="M9.35 16.88c0 .07-.07.12-.17.12S9 17 9 16.88s.08-.12.17-.12s.18.05.18.12Zm-1-.15c0 .07 0 .15.14.17a.15.15 0 0 0 .2-.07c0-.07 0-.14-.14-.17s-.18 0-.2.07Zm1.42-.05c-.09 0-.15.08-.14.16s.09.11.19.09s.15-.09.14-.16s-.09-.1-.19-.09ZM11.9 4A7.83 7.83 0 0 0 4 12.07A8.29 8.29 0 0 0 9.47 20c.41.07.56-.19.56-.4v-2s-2.26.5-2.74-1c0 0-.36-1-.89-1.21c0 0-.74-.52.05-.51a1.67 1.67 0 0 1 1.24.85a1.69 1.69 0 0 0 2.36.69a1.83 1.83 0 0 1 .51-1.11c-1.8-.21-3.62-.47-3.62-3.66A2.54 2.54 0 0 1 7.7 9.7a3.21 3.21 0 0 1 .08-2.24c.68-.22 2.23.89 2.23.89a7.46 7.46 0 0 1 4.05 0s1.55-1.11 2.23-.89a3.14 3.14 0 0 1 .08 2.24a2.61 2.61 0 0 1 .83 1.95c0 3.2-1.9 3.45-3.7 3.66a2 2 0 0 1 .5 1.5v2.77a.42.42 0 0 0 .56.4A8.22 8.22 0 0 0 20 12.07A8 8 0 0 0 11.9 4ZM7.14 15.41v.17a.12.12 0 0 0 .17 0s0-.11 0-.18s-.13-.03-.17.01Zm-.35-.27s0 .1.07.13a.09.09 0 0 0 .14 0s0-.1-.07-.13s-.12-.03-.14 0Zm1 1.18v.21c0 .07.17.08.21 0s0-.14 0-.21s-.13-.05-.17 0Zm-.37-.49v.2c0 .08.14.11.19.08a.16.16 0 0 0 0-.21c-.05-.08-.13-.11-.19-.07Z"/></svg>
                 </div>

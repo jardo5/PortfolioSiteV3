@@ -4,9 +4,6 @@ module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts,svg}'],
   theme: {
     extend: {
-      backgroundImage: {
-        'customPattern': "url('/background.png')",
-      },
       fontFamily: {
         FiraCode: ['Fira Code', 'monospace'],
       },
@@ -34,6 +31,13 @@ module.exports = {
       listStyleType: {
         'square': 'square',
       },
+      boxShadow: {
+        'contactForm': '0 0.3px 0.7px rgba(0, 0, 0, 0.126)',
+      },
+      backgroundImage:{
+        'contactWave': "url('contactWave.svg')",
+      }
+
     },
   },
   plugins: [],

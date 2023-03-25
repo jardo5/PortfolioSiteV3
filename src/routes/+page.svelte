@@ -1,4 +1,18 @@
-<div class="bg-[url('polygonMain.svg')] bg-no-repeat h-full w-full font-FiraCode justify-center text-white flex flex-col pl-12">
-    <h1 class="text-8xl">Jarod Schupp</h1>
-    <h2 class="text-5xl">Lorem ipsum dolor sit amat</h2>
-</div>
+<script>
+    import RandomLetters from '../components/RandomLetters.svelte';
+    import { fade } from "svelte/transition";
+</script>
+
+<style>
+
+</style>
+
+<section in:fade="{{duration: 2000}}" class="bg-no-repeat h-full w-full justify-between font-FiraCode text-white flex flex-row px-12 animate-fade-in">
+    <section class="flex flex-col justify-center w-1/2">
+        <span class="text-8xl"> 
+            <RandomLetters /> 
+        </span>
+        <h2 class="text-5xl">Software Engineer</h2>
+    </section>
+    <img class="mx-40" src="undrawCode.svg" height="500px" width="500px">
+</section>

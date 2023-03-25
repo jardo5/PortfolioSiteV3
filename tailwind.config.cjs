@@ -1,18 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ['./src/**/*.{html,js,svelte,ts,svg}'],
+  content: ['./src/**/*.{html,js,svelte,ts,svg}', './src/components/*.svelte'],
   theme: {
     extend: {
       fontFamily: {
         FiraCode: ['Fira Code', 'monospace'],
       },
       backgroundColor: {
-        'secondary': "#546a7b",
+        'secondary': "#192c43",
         'navHover': "#4c606f",
       },
       borderColor: {
-        'navBorder': "#4c606f"
+        'navBorder': "#2f4155"
       },
       from: {
         'underlineStart': "#4c606f"

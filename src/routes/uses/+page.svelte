@@ -1,5 +1,17 @@
-<div class="font-FiraCode text-white flex flex-col">
-    <div class="flex flex-col justify-center items-center mt-6 gap-2">
+<script>
+    import { fade } from "svelte/transition";
+</script>
+<style>
+    #card {
+        @apply backdrop-blur-[_9px_] border rounded-[10px] border-solid border-[rgba(_255,255,255,0.18_)];
+  background: rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    }
+</style>
+
+<div in:fade="{{duration: 2000}}" class="font-FiraCode h-full w-full flex justify-center flex-col">
+    <div class="flex flex-col justify-center items-center  my-6 gap-2 overflow-clip">
         <!--TODO: Change color-->
         <h1 class="text-4xl flex flex-row bg-gradient-to-r from-blue-600 to-white text-transparent bg-clip-text">
             <span class="">&#60;</span>
@@ -10,8 +22,8 @@
         <h3 class="text-xl">My Daily Setup & Tools</h3>
         <h3 class="text-sm">Last Update: 3/23/23</h3>
     </div>
-    <div class="flex flex-row justify-center items-center w-full h-fit">
-        <div class="text-center h-1/2 w-1/4 flex text-white flex-col overflow-y-scroll">
+    <div class="flex flex-row justify-center  w-full overflow-scroll flex-wrap gap-12">
+        <div id="card" class="text-center h-2/3 w-1/4 flex text-white flex-col overflow-y-scroll ">
             <h1 class="w-full text-2xl">
                 Hardware
             </h1>
@@ -52,7 +64,7 @@
                 </li>   
             </ul>
         </div>
-        <div class="text-center h-1/2 w-1/4 flex flex-col overflow-y-scroll">
+        <div id="card" class="text-center h-2/3 w-1/4 flex flex-col overflow-y-scroll">
             <h1 class="w-full text-2xl">
                 Software & Tools
             </h1>
@@ -76,7 +88,7 @@
                     </ul>
             </ul>
         </div>
-        <div class="text-center h-1/2 w-1/4 flex flex-col overflow-y-scroll">
+        <div id="card" class="text-center h-2/3 w-1/4 flex flex-col overflow-y-scroll overflow-clip">
             <h1 class="w-full text-2xl">
                 Languages & Frameworks
             </h1>

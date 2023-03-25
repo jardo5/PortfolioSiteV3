@@ -1,9 +1,12 @@
-<style>
+<script>
+    import { fade } from "svelte/transition";
+</script>
 
+<style>
 </style>
 
-<div class="font-FiraCode h-full w-full flex justify-center items-center">
-    <div class="w-3/4 h-3/4 rounded-3xl bg-contactWave bg-no-repeat bg-white flex flex-row overflow-clip">
+<section in:fade="{{duration: 2000}}" class="font-FiraCode h-full w-full flex justify-center items-center">
+    <div class="w-3/4 h-4/5 rounded-3xl bg-contactWave bg-no-repeat bg-[#ffffffc4] flex flex-row overflow-clip border border-black shadow-2xl drop-shadow-lg">
         <div class="w-1/2 h-full flex justify-center items-center flex-row">
             <img src="contactSVG.svg" alt="Contact" width="" height="" class="">
             <hr class="border-r-indigo-400 border-r-4">
@@ -21,14 +24,27 @@
                         <input type="email" name="email" id="email" class="border-2 border-black bg-gray-200 text-black rounded-2xl p-2">
                     </div>
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col flex-grow">
                     <label for="message" class="text-2xl text-black">Message</label>
                     <textarea name="message" id="message" cols="30" rows="10" class="flex-grow border-2 resize-none border-black bg-gray-200 text-black rounded-2xl p-2"></textarea>
                 </div>
                 <div class="flex flex-row justify-center py-4">
                     <button type="submit" class="bg-black text-white rounded-lg p-2 hover:bg-slate-900 w-1/2 lg:w-1/4">Submit</button>
                 </div>
+                <div class="flex items-center justify-center">
+                    <span class="w-1/3 block bg-black h-[1px]"></span>
+                    <h1 class="text-black font-black">OR</h1>
+                    <span class="w-1/3 block bg-black h-[1px]"></span>
+                </div>
+                <div class="flex flex-row justify-center gap-5 ">
+                    <a href="mailto:schuppjarod@gmail.com">
+                        <img src="gmail.svg" alt="gmail" height="55px" width="55px"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jarod-schupp/">
+                        <img src="linkedin.svg" alt="linkedin" height="55px" width="55px"/>
+                    </a>
+                </div>
             </form>
         </div>
     </div>
-</div>
+</section>

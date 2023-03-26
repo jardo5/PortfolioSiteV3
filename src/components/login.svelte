@@ -1,19 +1,15 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    import { fade } from "svelte/transition";
     let email, password;
     const dispatcher = createEventDispatcher()
     function login(event) {
-        console.log(email);
-        console.log(password);
-        event.preventDefault();
+        event.preventDefault()
         dispatcher('login', {
-            email: email,
-            password: password
-  });
-}
-
-
-    
+            email,
+            password
+        })
+    }
 </script>
 
 <style>
@@ -29,7 +25,6 @@
     <title>Secret Login</title>
 </svelte:head>
 
-<!-- svelte-ignore missing-declaration -->
 <div class="h-full w-full justify-center flex items-center" in:fade="{{duration: 2000}}">
     <section id="card" class="h-3/5 w-1/4">
         <form class="h-full w-full">

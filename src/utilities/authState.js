@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { auth } from '../../firebase';
+import { auth } from '../firebase';
 
 const authState = writable('initializing');
 

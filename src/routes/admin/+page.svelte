@@ -37,10 +37,11 @@
     imageUrls = {};
   });
 
-  function editProject(project) {
-    const url = `/admin/edit/${project.id}`;
-    goto(url, { state: { project } });
+  function editProject(projectId) {
+    goto(`/admin/update/${projectId}`);
   }
+
+
 
   async function deleteProject(projectId) {
     const confirmed = confirm('Are you sure you want to delete this project?');

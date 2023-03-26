@@ -11,6 +11,10 @@
     }
 </style>
 
+<svelte:head>
+    <title>About</title>
+</svelte:head>
+
 <div in:fade="{{duration: 2000}}" class="h-full w-full font-FiraCode mt-12 text-white flex flex-col items-center gap-12">
     <div class="text-center">
         <h2 class="text-5xl font-bold">A Little Bit About Me</h2>

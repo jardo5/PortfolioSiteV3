@@ -5,6 +5,10 @@
 <style>
 </style>
 
+<svelte:head>
+    <title>Contact</title>
+</svelte:head>
+
 <section in:fade="{{duration: 2000}}" class="font-FiraCode h-full w-full flex justify-center items-center">
     <div class="w-3/4 h-4/5 rounded-3xl bg-contactWave bg-no-repeat bg-[#ffffffc4] flex flex-row overflow-clip border border-black shadow-2xl drop-shadow-lg">
         <div class="w-1/2 h-full flex justify-center items-center flex-row">

@@ -11,7 +11,7 @@
   let imageUrls = {};
 
   onMount(async () => {
-    if (!isLoggedIn) {
+    if (!$isLoggedIn) {
       goto('/login');
       return;
     }
@@ -40,8 +40,6 @@
   function editProject(projectId) {
     goto(`/admin/update/${projectId}`);
   }
-
-
 
   async function deleteProject(projectId) {
     const confirmed = confirm('Are you sure you want to delete this project?');

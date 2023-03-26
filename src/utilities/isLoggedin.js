@@ -1,9 +1,9 @@
-// isLoggedIn.js
 import { derived } from 'svelte/store';
-import { auth } from '../firebase';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth }  from '../firebase';
 import authState from './authState';
 
-auth.onAuthStateChanged((user) => {
+onAuthStateChanged(auth, (user) => {
   if (user) {
     authState.set('loggedIn');
   } else {
@@ -12,4 +12,5 @@ auth.onAuthStateChanged((user) => {
 });
 
 const isLoggedIn = derived(authState, ($authState) => $authState === 'loggedIn');
+
 export default isLoggedIn;

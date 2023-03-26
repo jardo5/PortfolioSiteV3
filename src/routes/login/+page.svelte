@@ -9,28 +9,26 @@
     import { writable } from 'svelte/store';
     
     const errorMessage = writable("");
-
+  
     const errorMessages = [
     "Please Stop",
     "No really, stop it",
     "Got nothing better to do?",
     "Ok last warning stop....or else",
   ];
-
+  
     onMount(() => {
-        if ($isLoggedIn) {
-        goto('/admin');
-        }
+        $isLoggedIn && goto('/admin');
     });
-
-
+  
+  
     async function signIn(event) {
         try {
             await setPersistence(auth, browserLocalPersistence);    
             let user = await signInWithEmailAndPassword(auth, event.detail.email, event.detail.password);
             await setDoc(userDoc(auth.currentUser.uid), { username: user.user.displayName, email: user.user.email });
             goto("./admin");
-        }    catch (error) {
+        } catch (error) {
         console.log("Error signing in: ", error);
         const currentMessageIndex = errorMessages.indexOf($errorMessage);
         if (currentMessageIndex < errorMessages.length - 1) {
@@ -39,9 +37,9 @@
             goto("/");
         }
     }
-}
-
-</script>
+  }
+  
+  </script>
 
 <svelte:head>
     <title>

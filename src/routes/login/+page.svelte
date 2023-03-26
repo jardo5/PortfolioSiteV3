@@ -14,19 +14,20 @@
     let password = '';
   
     async function signIn(event) {
-        console.log('Email:', event.detail.email);
-        console.log('Password:', event.detail.password);
-        try {
-            await setPersistence(auth, browserLocalPersistence);
-            const userCredential = await signInWithEmailAndPassword(auth, event.detail.email, event.detail.password);
-            await setDoc(userDoc(userCredential.user.uid), { email: userCredential.user.email });
-            authStatus.set({ loggedIn: true, errorMessage: '' }); // Update auth status
-            goto('/admin');
-        } catch (error) {
-            console.log(error);
-            authStatus.set({ loggedIn: false, errorMessage: error.message }); // Update auth status with error message
-        }
-    }
+  console.log('Email:', event.detail.email);
+  console.log('Password:', event.detail.password);
+  try {
+    await setPersistence(auth, browserLocalPersistence);
+    const userCredential = await signInWithEmailAndPassword(auth, event.detail.email, event.detail.password);
+    await setDoc(userDoc(userCredential.user.uid), { email: userCredential.user.email });
+    authStatus.set({ loggedIn: true, errorMessage: '' }); // Update auth status
+    goto('/admin');
+  } catch (error) {
+    console.log(error);
+    authStatus.set({ loggedIn: false, errorMessage: error.message }); // Update auth status with error message
+  }
+}
+
   </script>
 
 <svelte:head>

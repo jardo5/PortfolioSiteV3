@@ -2,6 +2,10 @@
     import { fade } from "svelte/transition";
 </script>
 
+<style>
+    
+</style>
+
 <svelte:head>
     <title>Projects</title>
 </svelte:head>

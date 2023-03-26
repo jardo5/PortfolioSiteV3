@@ -10,6 +10,7 @@
       const unsubscribe = auth.onAuthStateChanged(user => {
         if (user) {
           isLoggedIn.set(true);
+          goto('/admin');
         } else {
           isLoggedIn.set(false);
           goto('/login');
@@ -21,5 +22,8 @@
       }
     });
   </script>
+  <div>
+    sdsdsdsds
+  </div>
   
   

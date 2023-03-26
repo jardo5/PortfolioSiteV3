@@ -1,7 +1,6 @@
 <script>
     import RandomLetters from '../components/RandomLetters.svelte';
     import { fade } from "svelte/transition";
-	import Layout from './+layout.svelte';
 </script>
 
 <style>

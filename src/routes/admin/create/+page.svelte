@@ -26,13 +26,11 @@
             const description = form.description.value;
             const tags = form.tags.value.split(",").map((tag) => tag.trim());
             const githubLink = form.githubLink.value;
-  
-            // Upload image to Firebase Storage
+
             const storageRef = ref(storage, `images/${imageFile.name}`);
             await uploadBytes(storageRef, imageFile);
             const imageUrl = await getDownloadURL(storageRef);
-  
-            // Store project details in Firebase Database
+
             const db = getFirestore();
             const newProjectRef = await addDoc(collection(db, "projects"), {
                 title,
@@ -41,12 +39,9 @@
                 tags,
                 githubLink,
             });
-  
-            // Reset form fields
             form.reset();
             submissionStatus = "Submitted!";
   
-            // Dispatch event with project data
             dispatcher("sendProjDetails", { ...newProjectRef, title, description, imageUrl, tags });
         } catch (error) {
             console.log("Error adding document: ", error);

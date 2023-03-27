@@ -1,38 +1,31 @@
-# create-svelte
+# My Portfolio Site
+This is the third iteration of my personal portfolio website. Using SvelteKit, TailwindCSS, and Firebase for authentication and DB purposes.
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Features
 
-## Creating a project
+- Responsive design for mobile and desktop devices
+- Pages for Home, Login, About, Projects, Contact, Resume, and Uses (My daily hardware & software/tools).
+- CRUD abilities for authenticated users through Firebase
+- Contact page with a form to send me an email
+- Footer with links to my LinkedIn, GitHub, and email
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+1. Clone the repository: `git clone https://github.com/jardo5/PortfolioSiteV3.git`
+2. Install dependencies: `npm i`
+3. Start the server: `npm run dev`
+5. Open `http://localhost:5173/` in your browser
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Technologies Used
 
-## Developing
+- HTML/CSS/JavaScript
+- SvelteKit
+- Tailwind
+- Firebase (Auth, Storage, and Database)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Credits
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- Designed and developed by Jarod Schupp
+- Background pattern from Loading.io (https://loading.io/)
+- Front page illustration from unDraw.co (https://undraw.co/)
+- Icons from IconFinder (https://www.iconfinder.com/)

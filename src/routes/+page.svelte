@@ -1,5 +1,5 @@
 <script>
-    import RandomLetters from '../components/RandomLetters.svelte';
+    import RandomLetters from '../components/randomLetters.svelte';
     import { fade } from "svelte/transition";
 </script>
 

@@ -10,7 +10,7 @@
     }
 </style>
 
-<div in:fade="{{duration: 2000}}" class="font-FiraCode h-full w-full flex justify-center flex-col">
+<div in:fade="{{duration: 2000}}" class="font-FiraCode h-screen w-full flex justify-center flex-col">
     <div class="flex flex-col justify-center items-center  my-6 gap-2 overflow-clip">
         <!--TODO: Change color-->
         <h1 class="text-4xl flex flex-row bg-gradient-to-r from-blue-600 to-white text-transparent bg-clip-text">
@@ -22,7 +22,7 @@
         <h3 class="text-xl">My Daily Setup & Tools</h3>
         <h3 class="text-sm">Last Update: 3/23/23</h3>
     </div>
-    <div class="flex flex-row justify-center  w-full overflow-scroll flex-wrap gap-12">
+    <div class="flex flex-row justify-center  w-full overflow-clip flex-wrap gap-12">
         <div id="card" class="text-center h-2/3 w-1/4 flex text-white flex-col overflow-y-scroll ">
             <h1 class="w-full text-2xl">
                 Hardware

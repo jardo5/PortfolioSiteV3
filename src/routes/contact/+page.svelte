@@ -9,8 +9,8 @@
     <title>Contact</title>
 </svelte:head>
 
-<section in:fade="{{duration: 2000}}" class="font-FiraCode h-full w-full flex justify-center items-center">
-    <div class="w-3/4 h-4/5 rounded-3xl bg-contactWave bg-no-repeat bg-[#ffffffc4] flex flex-row overflow-clip border border-black shadow-2xl drop-shadow-lg">
+<section in:fade="{{duration: 2000}}" class="font-FiraCode h-screen w-full flex justify-center items-center">
+    <div class="w-3/4 h-[85%] rounded-3xl bg-contactWave bg-no-repeat bg-[#ffffffc4] flex flex-row overflow-clip border border-black shadow-2xl drop-shadow-lg">
         <div class="w-1/2 h-full flex justify-center items-center flex-row">
             <img src="contactSVG.svg" alt="Contact" width="" height="" class="">
             <hr class="border-r-indigo-400 border-r-4">
@@ -44,7 +44,7 @@
                     <a href="mailto:schuppjarod@gmail.com">
                         <img src="gmail.svg" alt="gmail" height="55px" width="55px"/>
                     </a>
-                    <a href="https://www.linkedin.com/in/jarod-schupp/">
+                    <a href="https://www.linkedin.com/in/jarod-schupp/" target="_blank">
                         <img src="linkedin.svg" alt="linkedin" height="55px" width="55px"/>
                     </a>
                 </div>

@@ -11,7 +11,7 @@
     <title>Jarod Schupp</title>
 </svelte:head>
 
-<section in:fade="{{duration: 2000}}" class="bg-no-repeat h-full w-full justify-between font-FiraCode text-white flex flex-row px-12 animate-fade-in">
+<section in:fade="{{duration: 2000}}" class="bg-no-repeat h-screen w-full justify-between font-FiraCode text-white flex flex-row px-12 animate-fade-in">
     <section class="flex flex-col justify-center w-1/2">
         <span class="text-8xl"> 
             <RandomLetters /> 

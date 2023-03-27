@@ -5,7 +5,7 @@
     import { onMount } from "svelte";
     import { auth, userDoc } from "../../firebase";
     import { goto } from "$app/navigation";
-    import { setDoc } from "firebase/firestore/lite";
+    import { setDoc } from "firebase/firestore";
     import { writable } from 'svelte/store';
     
     const errorMessage = writable("");
@@ -47,7 +47,7 @@
     </title>
 </svelte:head>
 
-<div class="h-full w-full flex justify-center items-center">
+<div class="h-screen w-full flex justify-center items-center">
     <div class="h-full w-full p-8 rounded-md flex flex-col items-center">
         <span class="text-red-600 absolute font-extrabold text-8xl my-2 text-center animate-pulseFade" class:visible={$errorMessage != ""}>
             { $errorMessage }

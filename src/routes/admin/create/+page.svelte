@@ -25,6 +25,7 @@
             const title = form.title.value;
             const description = form.description.value;
             const tags = form.tags.value.split(",").map((tag) => tag.trim());
+            const githubLink = form.githubLink.value;
   
             // Upload image to Firebase Storage
             const storageRef = ref(storage, `images/${imageFile.name}`);
@@ -38,6 +39,7 @@
                 description,
                 imageUrl,
                 tags,
+                githubLink,
             });
   
             // Reset form fields
@@ -61,7 +63,7 @@
     }
 </style>
 
-<div class="h-full w-full justify-center flex items-center" in:fade="{{duration: 2000}}">
+<div class="h-screen w-full justify-center flex items-center" in:fade="{{duration: 2000}}">
     <section id="card" class="h-3/5 w-1/4">
       <form class="h-full w-full" bind:this={form}>
         <div class="h-full w-full flex flex-col justify-center items-center text-black">
@@ -70,6 +72,7 @@
           <input required type="text" name="title" placeholder="Title" class="h-12 w-1/2 border-2 border-solid border-gray-300 rounded-md p-2 my-2">
           <input required type="text" name="description" placeholder="Description" class=" h-12 w-1/2 border-2 border-solid border-gray-300 rounded-md p-2 my-2">
           <input required type="text" name="tags" placeholder="Tags" class=" h-12 w-1/2 border-2 border-solid border-gray-300 rounded-md p-2 my-2">
+          <input required type="text" name="githubLink" placeholder="GitHub Link" class="h-12 w-1/2 border-2 border-solid border-gray-300 rounded-md p-2 my-2">
           <button type="submit" on:click|preventDefault={handleSubmit} class="bg-blue-500 text-white rounded-2xl px-6 py-2 my-2">Submit</button>
           <p class="my-2 text-lg font-bold text-center w-1/2" class:success={submissionStatus === "Submitted!"} class:error={submissionStatus.startsWith("Error")}>
             {#if submissionStatus === "Submitted!"}

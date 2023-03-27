@@ -3,6 +3,7 @@
     import { getDocs, collection } from 'firebase/firestore';
     import { getDownloadURL, ref } from 'firebase/storage';
     import { db, storage } from '../../firebase';
+    import footerVisible from '../+layout.svelte';
   
     let projects = [];
     let imageUrls = {};
@@ -37,13 +38,13 @@
       -webkit-backdrop-filter: blur(9px);
       backdrop-filter: blur(9px);
     }
-    </style>
+  </style>
   
-  <div class="flex flex-wrap justify-center gap-4 font-FiraCode mt-12">
+  <div class="h-full w-screen flex flex-wrap justify-center gap-4 font-FiraCode pt-12 pb-12 overflow-auto">
     {#each projects as project}
-      <div id="card" class="p-4 rounded-md flex flex-col">
+      <div id="card" class="p-4 rounded-md flex flex-col w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
         <img src={imageUrls[project.id]} alt={project.title} class="h-40 object-cover mb-2 rounded-md border border-black">
-        <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center h-full">
           <h2 class="text-lg font-bold mb-2">{project.title}</h2>
           <p class="text-sm text-gray-300 mb-2">{project.description}</p>
           <div class="flex flex-wrap">
@@ -51,9 +52,11 @@
               <span class="cursor-pointer flex items-center justify-center bg-[#5976f554] p-3 h-6 rounded-2xl border-[#5976f5f8] gap-1 w-fit border transition ease-in-out delay-100 hover:bg-[#5976f5d7] hover:border-[#5976f5]">{tag}</span>
             {/each}
           </div>
+          {#if project.githubLink}
+            <a href="{project.githubLink}" target="_blank" class="text-sm text-gray-300 underline py-5">Github</a>
+          {/if}
         </div>
       </div>
     {/each}
   </div>
-  
   

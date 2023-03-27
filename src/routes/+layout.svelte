@@ -2,43 +2,25 @@
     import "../app.css";
 
     import Navigation from "../components/navigation.svelte";
-
     import { fade } from "svelte/transition";
-    import { writable } from "svelte/store";
     import { slide } from 'svelte/transition';
-
-
-    const footerVisible = writable(false);
-    function toggleFooter(){
-        footerVisible.update((value) => !value);
-    }
+	
 </script>
 
 <style>
-
 </style>
 
 
-<body class="w-full h-screen flex flex-col overflow-clip bg-[#0b131d]">
+<body class="w-full h-screen flex flex-col overflow-clip bg-[url('mainBG.svg')]">
     <Navigation />
-        <section class="h-full w-full text-white flex flex-col justify-center items-center bg-[url('mainBG.svg')]">
-
-            
+        <section class="min-h-[calc(100vh-22rem)] w-full text-white flex flex-col justify-center items-center bg-[url('mainBG.svg')]">
                 <main class="h-full w-full text-white flex flex-col justify-center items-center" >
                     <slot />
-                </main>
-
-
-            <div class="w-fit absolute justify-center animate-pulseFade bottom-1 text-center">
-              <svg id="showSVG" class="fill-white bottom-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 24 24" on:click={toggleFooter} on:keyup={toggleFooter}>
-                <path fill="currentColor" d="m7 14l5-5l5 5H7Z" />
-              </svg>
-            </div>
-        </section>
-          
-        <div class="relative fill-white">
-            {#if $footerVisible}
-              <footer class="flex h-22 w-full justify-center items-center bg-[#0b131d]" transition:slide="{{delay: 200, duration: 700}}" on:click={toggleFooter} on:keyup={toggleFooter}>
+                </main>               
+        </section>          
+        <div class="relative fill-white bottom-0">
+            
+              <footer class="flex h-22 w-full justify-center items-center bg-transparent">
                 
                 <span class="w-1/3 block bg-white h-[1px]"></span>
 
@@ -56,6 +38,6 @@
                 
                 <span class="w-1/3 block bg-white h-[1px]"></span>
                 </footer>
-            {/if}
+            
         </div>
 </body>

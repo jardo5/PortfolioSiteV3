@@ -55,40 +55,49 @@
   }
 </script>
 
-<div class="w-full h-full bg-[url('mainBG.svg')] flex items-center flex-col justify-center">
+<div class="w-full h-screen flex items-center flex-col justify-center">
   <div class="w-full h-12 flex justify-center items-center mt-12">
     <a href="/admin/create" class="py-2 px-4 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 transition duration-300">Add A New Project</a>
   </div>
-  <div class="max-w-4xl mx-auto flex justify-center items-center">
+  <div class="max-w-7xl mx-auto flex justify-center items-center">
     <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4">
-      <div class="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
-        <table class="min-w-full leading-normal">
+      <div class="inline-block min-w-full shadow-2xl rounded-lg overflow-auto h-[40rem] shadow-black">
+        <table class="min-w-full leading-normal overflow-auto">
           <thead>
             <tr>
-              <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Title</th>
-              <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Description</th>
-              <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Tags</th>
-              <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
+              <th class="px-5 py-3 border-b-2 border-gray-600 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Image</th>
+              <th class="px-5 py-3 border-b-2 border-gray-600 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Title</th>
+              <th class="px-5 py-3 border-b-2 border-gray-600 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Description</th>
+              <th class="px-5 py-3 border-b-2 border-gray-600 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Tags</th>
+              <th class="px-5 py-3 border-b-2 border-gray-600 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Github Link</th>
+              <th class="px-5 py-3 border-b-2 border-gray-600 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
             </tr>
           </thead>
           <tbody>
             {#each projects as project}
             <tr>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <td class="px-5 py-5 border-b border-gray-200 bg-white">
+                <img src={imageUrls[project.id]} alt={project.title} class="w-full h-full object-cover border border-black shadow-2xl">
+              </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm overflow-hidden">
                 <div class="flex items-center">
-                  <img src={imageUrls[project.id]} alt={project.title} class="h-10 w-10 rounded-full mr-2 object-cover border border-black">
                   <span class="font-medium text-gray-800">{project.title}</span>
                 </div>
               </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <td class="px-5 py-5 border border-gray-200 bg-white text-sm">
                 <p class="text-gray-900">{project.description}</p>
               </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                {#each project.tags as tag}
-                <span class="inline-block px-2 py-1 text-sm font-semibold text-gray-700 mr-2 rounded-full bg-gray-200">{tag}</span>
-                {/each}
+              <td class="px-5 py-5 border border-gray-200 bg-white text-sm">
+                <div class="flex flex-wrap">
+                  {#each project.tags as tag}
+                  <span class="inline-block px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 rounded-full bg-gray-200">{tag}</span>
+                  {/each}
+                </div>
               </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <td class="px-5 py-5 border border-gray-200 bg-white text-sm">
+                <a href={project.githubLink} target="_blank" class="text-blue-600 hover:underline">Github</a>
+              </td>
+              <td class="px-5 py-5 border border-gray-200 bg-white text-sm">
                 <div class="flex justify-start">
                   <button class="bg-red-500 text-white rounded-md py-2 px-4 hover:bg-red-600 transition duration-300" on:click={() => deleteProject(project.id)}>Delete</button>
                   <button class="bg-blue-500 text-white rounded-md py-2 px-4 ml-2 hover:bg-blue-600 transition duration-300" on:click={() => editProject(project.id)}>Edit</button>

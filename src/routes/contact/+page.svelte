@@ -21,19 +21,19 @@
                 <div class="flex flex-row gap-12">
                     <div class="flex flex-col w-1/2">
                         <label for="name" class="text-2xl text-black">Name</label>
-                        <input type="text" name="name" id="name" class="border-2 border-black bg-gray-200 text-black rounded-2xl p-2">
+                        <input disabled placeholder="Disabled" type="text" name="name" id="name" class="border-2 border-black bg-gray-200 text-black rounded-2xl p-2">
                     </div>
                     <div class="flex flex-col w-1/2">
                         <label for="email" class="text-2xl text-black">Email</label>
-                        <input type="email" name="email" id="email" class="border-2 border-black bg-gray-200 text-black rounded-2xl p-2">
+                        <input disabled type="email" name="email" id="email" placeholder="Disabled" class="border-2 border-black bg-gray-200 text-black rounded-2xl p-2">
                     </div>
                 </div>
                 <div class="flex flex-col flex-grow">
                     <label for="message" class="text-2xl text-black">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="flex-grow border-2 resize-none border-black bg-gray-200 text-black rounded-2xl p-2"></textarea>
+                    <textarea disabled placeholder="Disabled until further notice, I'm active on LinkedIn." name="message" id="message" cols="30" rows="10" class="flex-grow border-2 resize-none border-black bg-gray-200 text-black rounded-2xl p-2"></textarea>
                 </div>
                 <div class="flex flex-row justify-center py-4">
-                    <button type="submit" class="bg-black text-white rounded-lg p-2 hover:bg-slate-900 w-1/2 lg:w-1/4">Submit</button>
+                    <button disabled type="submit" class="bg-black text-white rounded-lg p-2 hover:bg-slate-900 w-1/2 lg:w-1/4">Submit</button>
                 </div>
                 <div class="flex items-center justify-center">
                     <span class="w-1/3 block bg-black h-[1px]"></span>

@@ -5,7 +5,8 @@
   import { getDownloadURL, ref } from 'firebase/storage';
   import { db, storage } from '../../firebase';
   import { goto } from '$app/navigation';
-  import { isLoggedIn } from './../../utilities/isLoggedIn';
+  import isLoggedIn from '$lib/utilities/isLoggedIn.js';
+
 
   let projects = [];
   let imageUrls = {};

@@ -36,7 +36,7 @@
         </div>
         <div
           class="h-full w-24 flex justify-center items-center border-navBorder border-x hover:transition-all hover:ease-in-out hover:bg-navHover cursor-pointer"
-          on:click={logout}
+          on:click={logout} on:keyDown={logout}
         >
           <span
             class='bg-left-bottom bg-gradient-to-r from-current to-slate-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'

@@ -18,5 +18,5 @@
         </span>
         <h2 class="text-5xl">Software Engineer</h2>
     </section>
-    <img class="mx-40" src="undrawCode.svg" height="500px" width="500px">
+    <img class="mx-40" src="undrawCode.svg" alt="undrawCode" height="500px" width="500px">
 </section>

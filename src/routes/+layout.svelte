@@ -8,10 +8,13 @@
 </script>
 
 <style>
+    body {
+        background-image: url('/mainBG.svg');
+    }
 </style>
 
 
-<body class="w-full h-screen flex flex-col overflow-clip bg-[url('mainBG.svg')]">
+<body class="w-full h-screen flex flex-col overflow-clip">
     <Navigation />
         <section class="min-h-[calc(100vh-22rem)] w-full text-white flex flex-col justify-center items-center bg-transparent">
                 <main class="h-full w-full text-white flex flex-col justify-center items-center" >

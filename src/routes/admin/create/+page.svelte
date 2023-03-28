@@ -3,7 +3,7 @@
     import { createEventDispatcher } from "svelte";
     import { goto } from '$app/navigation';
     import { onMount } from 'svelte';
-    import isLoggedIn from '/src/utilities/isLoggedIn';
+    import isLoggedIn from '../../../utilities/isLoggedIn';
     import { collection, addDoc, getFirestore } from "firebase/firestore";
     import { storage } from "../../../firebase";
     import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";

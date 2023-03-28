@@ -1,14 +1,11 @@
 <script>
-  import isLoggedIn from 'utilities/isLoggedIn';
   import { onMount } from 'svelte';
   import { onDestroy } from 'svelte';
   import { getDocs, collection, deleteDoc, doc} from 'firebase/firestore';
   import { getDownloadURL, ref } from 'firebase/storage';
   import { db, storage } from '../../firebase';
   import { goto } from '$app/navigation';
-  
-  
-
+  import isLoggedIn from '../../utilities/isLoggedIn';
 
   let projects = [];
   let imageUrls = {};

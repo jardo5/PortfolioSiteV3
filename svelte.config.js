@@ -1,21 +1,22 @@
-import { vite } from '@sveltejs/vite-plugin-svelte';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 import adapter from '@sveltejs/adapter-auto';
 import path from 'path';
 
 const config = {
   kit: {
-    adapter: adapter(),
     vite: {
-      plugins: [vite()],
-      resolve: {
-        alias: {
-          '@': path.resolve('src'),
-          'utilities': path.resolve('src/utilities')
-        }
-      }
-    }
+		plugins: [
+		  svelte(),
+		],
+		resolve: {
+		  alias: {
+			'@': path.resolve('src'),
+			'utilities': path.resolve('src/utilities')
+		  },
+		},
+	  },	  
   },
-  preprocess: [vite()]
+  preprocess: [svelte()]
 };
 
 export default config;

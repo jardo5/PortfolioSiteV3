@@ -1,5 +1,5 @@
 <script>
-  import isLoggedIn from '../../utilities/isLoggedIn';
+  import isLoggedIn from '@/utilities/isLoggedIn';
   import { onMount } from 'svelte';
   import { onDestroy } from 'svelte';
   import { getDocs, collection, deleteDoc, doc} from 'firebase/firestore';

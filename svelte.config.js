@@ -1,5 +1,7 @@
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import adapter from '@sveltejs/adapter-auto';
+import path from 'path';
+
 
 
 
@@ -9,8 +11,8 @@ const config = {
 		vite: {
 			resolve: {
 			  alias: {
-				'@': path.resolve('src'),
-				'utilities': path.resolve('src/utilities')
+				'@': './src',
+				'utilities': './src/utilities'
 			  }
 			}
 		  },

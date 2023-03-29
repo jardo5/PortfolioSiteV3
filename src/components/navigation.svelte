@@ -31,6 +31,13 @@
         {#if isMenuOpen}
         <nav id="menu" class="absolute bg-secondary w-44 h-fit border-t shadow-2xl overflow-clip" in:fly="{{ x: -200, duration: 2000 }}" out:fly="{{ x: -200, duration: 2000 }}">
           <div class="h-12 w-full flex justify-center items-center border-navBorder border-x hover:transition-all hover:ease-in-out hover:bg-navHover">
+            <a id="" href="/" class="group">
+                <span class='bg-left-bottom bg-gradient-to-r from-current to-slate-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                    Home
+                </span>
+            </a>
+        </div>
+          <div class="h-12 w-full flex justify-center items-center border-navBorder border-x hover:transition-all hover:ease-in-out hover:bg-navHover">
             <a id="" href="/about" class="group">
                 <span class='bg-left-bottom bg-gradient-to-r from-current to-slate-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
                     About

@@ -121,9 +121,9 @@
         <div
           class="h-12 w-full flex justify-center items-center border-navBorder border-x hover:transition-all hover:ease-in-out hover:bg-navHover"
         >
-          <a id="" href="/admin" class="group">
+          <a id="" href="/admin" class="group w-24">
             <span
-              class='bg-left-bottom bg-gradient-to-r from-current to-slate-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'
+              class='justify-center flex bg-left-bottom bg-gradient-to-r from-current to-slate-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'
             >
               Panel
             </span>
@@ -134,7 +134,7 @@
           on:click={logout} on:keydown={logout}
         >
           <span
-            class='bg-left-bottom bg-gradient-to-r from-current to-slate-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'
+            class='w-24 justify-center flex bg-left-bottom bg-gradient-to-r from-current to-slate-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'
           >
             Logout
           </span>

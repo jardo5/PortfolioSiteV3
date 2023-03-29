@@ -76,7 +76,7 @@
           <tbody>
             {#each projects as project}
             <tr>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white">
+              <td class="px-5 py-5 border-b border-gray-200 bg-white ">
                 <img src={imageUrls[project.id]} alt={project.title} class="w-full h-full object-cover border border-black shadow-2xl">
               </td>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm overflow-hidden">
@@ -85,7 +85,7 @@
                 </div>
               </td>
               <td class="px-5 py-5 border border-gray-200 bg-white text-sm">
-                <p class="text-gray-900">{project.description}</p>
+                <p class="text-gray-900 line-clamp-5 overflow-ellipsis">{project.description}</p>
               </td>
               <td class="px-5 py-5 border border-gray-200 bg-white text-sm">
                 <div class="flex flex-wrap">
@@ -98,9 +98,9 @@
                 <a href={project.githubLink} target="_blank" class="text-blue-600 hover:underline">Github</a>
               </td>
               <td class="px-5 py-5 border border-gray-200 bg-white text-sm">
-                <div class="flex justify-start">
+                <div class="flex flex-col gap-2 ">
                   <button class="bg-red-500 text-white rounded-md py-2 px-4 hover:bg-red-600 transition duration-300" on:click={() => deleteProject(project.id)}>Delete</button>
-                  <button class="bg-blue-500 text-white rounded-md py-2 px-4 ml-2 hover:bg-blue-600 transition duration-300" on:click={() => editProject(project.id)}>Edit</button>
+                  <button class="bg-blue-500 text-white rounded-md py-2 px-4  hover:bg-blue-600 transition duration-300" on:click={() => editProject(project.id)}>Edit</button>
                 </div>
               </td>
             </tr>

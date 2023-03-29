@@ -27,6 +27,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^2.0.1",
+		"@tailwindcss/line-clamp": "^0.4.2",
 		"firebase": "^9.18.0",
 		"firebase-auth": "^0.1.2"
 	}

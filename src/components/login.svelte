@@ -26,7 +26,7 @@
 </svelte:head>
 
 <div class="h-full w-full justify-center flex items-center" in:fade="{{duration: 2000}}">
-    <section id="card" class="h-3/5 w-1/4">
+    <section id="card" class="h-3/5 w-fit p-12">
         <form class="h-full w-full">
             <div class="h-full w-full flex flex-col justify-center items-center text-black">
                 <h1 class="text-2xl py-4 font-bold ">Admin Login</h1>

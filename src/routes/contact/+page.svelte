@@ -10,15 +10,15 @@
 </svelte:head>
 
 <section in:fade="{{duration: 2000}}" class="font-FiraCode h-screen w-full flex justify-center items-center">
-    <div class="w-3/4 h-[85%] rounded-3xl bg-contactWave bg-no-repeat bg-[#ffffffc4] flex flex-row overflow-clip border border-black shadow-2xl drop-shadow-lg">
-        <div class="w-1/2 h-full flex justify-center items-center flex-row">
+    <div class="w-3/4 h-[85%] rounded-3xl bg-contactWave bg-no-repeat bg-[#ffffffc4] flex flex-row overflow-clip border border-black shadow-2xl drop-shadow-lg overflow-y-auto sm:flex-col md:flex-col">
+        <div class="w-1/2 h-full flex justify-center items-center flex-row sm:w-full md:w-full">
             <img src="contactSVG.svg" alt="Contact" width="" height="" class="">
             <hr class="border-r-indigo-400 border-r-4">
         </div>
-        <div class="w-1/2 h-full flex mt-32 items-center flex-col">
-            <h1 class="text-3xl font-extrabold text-black">Contact Me</h1>
-            <form class="w-full h-full px-12 ">
-                <div class="flex flex-row gap-12">
+        <div class="w-1/2 h-full flex mt-32 items-center flex-col sm:mt-0 sm:w-full md:mt-0 md:w-full">
+            <h1 class="text-3xl font-extrabold text-black sm:text-center md:text-center">Contact Me</h1>
+            <form class="w-full h-full px-12">
+                <div class="flex flex-row gap-12 justify-center">
                     <div class="flex flex-col w-1/2">
                         <label for="name" class="text-2xl text-black">Name</label>
                         <input disabled placeholder="Disabled" type="text" name="name" id="name" class="border-2 border-black bg-gray-200 text-black rounded-2xl p-2">
@@ -28,9 +28,9 @@
                         <input disabled type="email" name="email" id="email" placeholder="Disabled" class="border-2 border-black bg-gray-200 text-black rounded-2xl p-2">
                     </div>
                 </div>
-                <div class="flex flex-col flex-grow">
+                <div class="flex flex-col">
                     <label for="message" class="text-2xl text-black">Message</label>
-                    <textarea disabled placeholder="Disabled until further notice, I'm active on LinkedIn." name="message" id="message" cols="30" rows="10" class="flex-grow border-2 resize-none border-black bg-gray-200 text-black rounded-2xl p-2"></textarea>
+                    <textarea disabled placeholder="Disabled until further notice, I'm active on LinkedIn." name="message" id="message" cols="30" rows="10" class="flex-grow border-2 resize-none border-black bg-gray-200 text-black rounded-2xl p-2 sm:w-full"></textarea>
                 </div>
                 <div class="flex flex-row justify-center py-4">
                     <button disabled type="submit" class="bg-black text-white rounded-lg p-2 hover:bg-slate-900 w-1/2 lg:w-1/4">Submit</button>

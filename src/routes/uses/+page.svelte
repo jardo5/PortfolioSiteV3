@@ -10,8 +10,8 @@
     }
 </style>
 
-<div in:fade="{{duration: 2000}}" class="font-FiraCode h-screen w-full flex justify-center flex-col">
-    <div class="flex flex-col justify-center items-center  my-6 gap-2 overflow-clip">
+<div in:fade="{{duration: 2000}}" class="h-full w-screen flex flex-col justify-center gap-4 font-FiraCode pt-12 pb-12 overflow-y-scroll sm:pt-4 md:pt-4 md:items-center lg:pt-4 lg:items-center">
+    <div class="flex flex-col justify-center items-center my-6 gap-2 sm:my-0 md:my-0 lg:my-0">
         <!--TODO: Change color-->
         <h1 class="text-4xl flex flex-row bg-gradient-to-r from-blue-600 to-white text-transparent bg-clip-text">
             <span class="">&#60;</span>
@@ -22,8 +22,8 @@
         <h3 class="text-xl">My Daily Setup & Tools</h3>
         <h3 class="text-sm">Last Update: 3/23/23</h3>
     </div>
-    <div class="flex flex-row justify-center  w-full overflow-clip flex-wrap gap-12">
-        <div id="card" class="text-center h-2/3 w-1/4 flex text-white flex-col overflow-y-scroll ">
+    <div class="flex flex-row justify-center w-full overflow-clip gap-12 sm:mx-1 sm:gap-4 sm:flex-col md:flex-col md:w-3/4 md:gap-4 lg:flex-col lg:w-3/4 lg:gap-4">
+        <div id="card" class="text-center h-2/3 w-1/4 flex text-white flex-col overflow-y-scroll sm:w-full sm:h-2/3 md:w-full lg:w-full">
             <h1 class="w-full text-2xl">
                 Hardware
             </h1>
@@ -64,7 +64,7 @@
                 </li>   
             </ul>
         </div>
-        <div id="card" class="text-center h-2/3 w-1/4 flex flex-col overflow-y-scroll">
+        <div id="card" class="text-center h-2/3 w-1/4 flex flex-col overflow-y-scroll sm:w-full sm:h-2/3 md:w-full lg:w-full">
             <h1 class="w-full text-2xl">
                 Software & Tools
             </h1>
@@ -88,7 +88,7 @@
                     </ul>
             </ul>
         </div>
-        <div id="card" class="text-center h-2/3 w-1/4 flex flex-col overflow-y-scroll overflow-clip">
+        <div id="card" class="text-center h-2/3 w-1/4 flex flex-col overflow-y-scroll sm:w-full sm:h-2/3 md:w-full lg:w-full">
             <h1 class="w-full text-2xl">
                 Languages & Frameworks
             </h1>

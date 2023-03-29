@@ -43,7 +43,7 @@
   
   <div in:fade="{{duration: 2000}}" class="h-full w-screen flex flex-wrap justify-center gap-4 font-FiraCode pt-12 pb-12 overflow-auto">
     {#each projects as project}
-      <div id="card" class="p-4 rounded-md flex flex-col w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+      <div id="card" class="p-4 rounded-md flex flex-col w-1/4 sm:w-full sm:mx-12 md:w-4/6 lg:w-2/3 xl:w-1/4">
         <img src={imageUrls[project.id]} alt={project.title} class="h-40 object-cover mb-2 rounded-md border border-black">
         <div class="flex flex-col justify-center items-center h-full">
           <h2 class="text-lg font-bold mb-2">{project.title}</h2>

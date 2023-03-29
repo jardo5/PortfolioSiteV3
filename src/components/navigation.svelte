@@ -20,7 +20,7 @@
 </script>
 
 
-<header class="bg-secondary h-12 w-full flex font-FiraCode justify-between text-white">
+<header class="bg-secondary h-12 w-full flex font-FiraCode justify-between text-white z-10">
     <div class="h-12 flex justify-center items-center  md:hidden lg:hidden xl:hidden 2xl:hidden">
       <aside class="">
         <button id="hamburger-btn" class="p-2 focus:outline-none" on:click={toggleMenu} on:mouseleave={toggleMenu}>

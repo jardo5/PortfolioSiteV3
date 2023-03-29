@@ -76,7 +76,7 @@
 </style>
 
 <div class="h-screen w-full justify-center flex items-center" in:fade="{{duration: 2000}}">
-  <section id="card" class="h-4/5 w-1/4">
+  <section id="card" class="h-fit w-2/4 sm:w-5/6 md:w-3/6 lg:w-4/6">
     <form class="h-full w-full" bind:this={form}>
       <div class="h-full w-full flex flex-col justify-center items-center text-black">
         <h1 class="text-4xl py-4 font-bold text-white underline">Update Project</h1>

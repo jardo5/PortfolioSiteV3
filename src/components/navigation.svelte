@@ -23,7 +23,7 @@
 <header class="bg-secondary h-12 w-full flex font-FiraCode justify-between text-white z-10">
     <div class="h-12 flex justify-center items-center  md:hidden lg:hidden xl:hidden 2xl:hidden">
       <aside class="">
-        <button id="hamburger-btn" class="p-2 focus:outline-none" on:click={toggleMenu} on:mouseleave={toggleMenu}>
+        <button id="hamburger-btn" class="p-2 focus:outline-none" on:click={toggleMenu}>
           <svg viewBox="0 0 20 20" class="w-6 h-6">
               <path fill="currentColor" d="M3 4h14a1 1 0 110 2H3a1 1 0 110-2zm0 6h14a1 1 0 110 2H3a1 1 0 110-2zm0 6h14a1 1 0 110 2H3a1 1 0 110-2z"></path>
           </svg>

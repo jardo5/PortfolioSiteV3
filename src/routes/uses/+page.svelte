@@ -28,6 +28,16 @@
 		>
 			<h1 class="w-full text-2xl">Hardware</h1>
 			<ul class="ml-12 list-square text-left">
+				<li class="">Macbook Pro 16in:
+					<ul class="list-square pl-4">
+						<li>CPU: M1 Pro</li>
+						<li>Ram: 16GB</li>
+						<li>Storage: 500GB</li>
+						<li>OS: Latest macOS Sonoma</li>
+						<li>Monitor: 49" Odyssey G9</li>
+					</li>
+				</ul>
+			<ul class="ml-12 list-square text-left">
 				<li class="">
 					Desktop:
 					<ul class="list-square pl-4">
@@ -48,7 +58,7 @@
 				</li>
 
 				<li>
-					Monitors:
+					Desktop Monitors:
 					<ul class="list-square pl-4">
 						<li>BenQ XL2411Z 24in 144hz</li>
 						<li>BenQ Zowie 24in XL2411p 144hz</li>
@@ -56,13 +66,14 @@
 					</ul>
 				</li>
 				<li>Keyboard: Logitech G915</li>
+				<li>Keyboard 2: Keychron K3 Pro</li>
 				<li>Mouse: Logitech G305</li>
 				<li>Mousepad: SteelSeries QcK 5XL</li>
-				<li>Headphones: SteelSeries Arctis 1 Wireless</li>
+				<li>Headphones: SteelSeries Arctis Pro Wired</li>
 				<li>
 					Other:
 					<ul class="list-square pl-4">
-						<li>Phone: iPhone 11 Pro Max 256GB</li>
+						<li>Phone: iPhone 15 Pro Max 256GB</li>
 						<li>Console: Playstation 5 Digital</li>
 					</ul>
 				</li>

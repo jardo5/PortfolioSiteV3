@@ -1,15 +1,14 @@
 <script>
-	import { fade } from 'svelte/transition';
+    import { fade } from 'svelte/transition';
 </script>
 
 <svelte:head>
-	<title>Resume</title>
+    <title>Resume</title>
 </svelte:head>
 
 <section
-	in:fade={{ duration: 2000 }}
-	class=" flex h-screen w-full flex-col justify-center pl-12 font-FiraCode text-white"
->
-	<h1 class="text-8xl">Jarod Schupp</h1>
-	<h2 class="text-5xl">TODO</h2>
+    in:fade={{ duration: 2000 }}
+    class="flex flex-col justify-center items-center h-screen w-full font-mono text-white ">
+
+    <img src="Jarod-Schupp-Resume-1.png" alt="Resume" class="w-fit h-3/4 mb-4 aspect-auto border-2 bg-white border-secondary"/>
 </section>

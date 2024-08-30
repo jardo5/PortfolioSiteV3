@@ -153,7 +153,7 @@
             </a>
         </div>
         <div class="h-12 w-full flex justify-center items-center border-navBorder border-r hover:bg-navHover">
-            <a id="" href="/resume" class="group w-24 flex justify-center items-center">
+            <a id="" href="/resume" rel="prefetch" class="group w-24 flex justify-center items-center">
                 <span class='bg-left-bottom bg-gradient-to-r from-current to-slate-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
                     Resume
                 </span>
